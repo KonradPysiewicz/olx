@@ -1,0 +1,13 @@
+Instrukcja do wykorzystania projektu (wymagany zainstalowany Laravel):
+Po sklonowaniu projektu do folderu należy w nim zainstalować wszystkie potrzebne pakiety, należy skorzystać z komend:
+>composer install
+>npm install
+Następnie trzeba wygenerować klucz dla aplikacji poleceniem:
+>php artisan key:generate
+Plik .env.example należy zmienić na .env i skonfigurować ustawienia do bazydanych.
+Do wygenerowania tabel należy użyc polecenia:
+>php artisan migrate
+Pozostaje tylko włączenie serwera:
+>php artisan serve
+
+Odkomentowanie funkcji boot() w pliku AppServiceProvider.php umożliwi wykorzystanie pagination za pomocą Bootstrapa
