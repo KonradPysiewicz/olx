@@ -22,7 +22,7 @@
         <form action="{{route('register')}}" method="post">
         @csrf
             <div class="form-group">
-                <input name="username" class="form-control @error('username') border border-danger @enderror" placeholder="Username" type="text" id="username" value="{{old('username')}}" pattern="/^[A-Z][a-zA-Z0-9]+$/" >
+                <input name="username" class="form-control @error('username') border border-danger @enderror" placeholder="Username" type="text" id="username" value="{{old('username')}}" >
             @error('username')
             <p class="text-danger">{{$message}}</p>
             @enderror

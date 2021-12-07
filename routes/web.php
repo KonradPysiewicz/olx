@@ -42,6 +42,9 @@ Route::post('/login',[LoginController::class, 'store']);
 Route::post('/logout',[LogoutController::class, 'store'])->name('logout');
 
 
+Route::get('/editPost/{post}',[PostController::class, 'edit'])->name('edit_post');
+Route::post('/update/{post}',[PostController::class, 'update'])->name('update_post');
+
 Route::get('/add_post',[PostController::class, 'index'])->name('add_post');
 Route::post('/add_post',[PostController::class, 'store']);
 Route::delete('/post/{post}/delete',[PostController::class, 'destroy'])->name('delete');

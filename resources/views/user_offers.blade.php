@@ -42,14 +42,11 @@
             Lokalizacja: {{$post->lokalizacja}}
 
             <div class="d-flex justify-content-between">
+              
+              
             <p class = "font-weight-bold position-end mt-2">{{$post->cena}} </p> 
 
-            <form action="{{route('delete', $post)}}" method="post">
-            @csrf
-            @method('DELETE')
-            <button type="submit" class="btn danger">Usuń</button>
-            </form>
-    
+          
             
             @if(!$post->favedBy(auth()->user()))
             <form action="{{route('favs', $post)}}" method="post">
@@ -71,6 +68,18 @@
           
           </form>
           @endif
+      </div>
+      <div class="d-flex justify-content-center">
+        <form action="{{route('delete', $post)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger top-static mr-2">Usuń</button>
+          </form>
+
+
+          <a href="{{ route('edit_post', $post) }}" class="btn btn-success ml-2">Edytuj</a>
+
+    </div>
         </div>
         </div>
       </div>
