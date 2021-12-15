@@ -78,11 +78,11 @@
 
 
           <a href="{{ route('edit_post', $post) }}" class="btn btn-success ml-2">Edytuj</a>
-
     </div>
+
         </div>
         </div>
-      </div>
+      
     </div>
       @endforeach
       @else

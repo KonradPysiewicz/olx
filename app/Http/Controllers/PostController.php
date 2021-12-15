@@ -16,8 +16,9 @@ class PostController extends Controller
 
     public function store(Request $request){
         $this->validate($request, [
-            'tytul' => 'required',
-            'image' => 'required']);
+            'tytul' => 'required|regex:/^[a-zA-Z0-9]+$/',
+            'image' => 'required',
+            'opis' => 'required']);
             
         $post = new Post();  
         $image = $request->file('image');

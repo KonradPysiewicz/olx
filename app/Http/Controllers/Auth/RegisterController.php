@@ -20,7 +20,7 @@ class RegisterController extends Controller
 
     public function store(Request $request){
         $this->validate($request, [
-            'username' => 'required|min:3|max:30',
+            'username' => 'required|min:3|max:30|regex:/^[A-Z][[a-zA-Z0-9]+$/',
             'email' => 'required|email|max:100',
             'password' => 'required|confirmed|min:6|max:30',
         ]);
